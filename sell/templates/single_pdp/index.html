@@ -1,0 +1,420 @@
+<!-- {% if items %}
+    <ul>
+    {% for item in items %}
+        <li>{{ item.Name }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %} -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="x-apple-disable-message-reformatting">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="telephone=no" name="format-detection">
+    <title></title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.20/css/uikit.css"> -->
+    <link rel="stylesheet" href="./jquery.Thailand.js/dist/jquery.Thailand.min.css">
+    
+	<link rel="stylesheet" href="css.css">
+
+	
+	<script>
+	$(document).ready(function(){
+
+		function incrementValue(e) {
+			  e.preventDefault();
+			  var fieldName = $(e.target).data('field');
+			  var parent = $(e.target).closest('div');
+			  var currentVal = parseInt(parent.find('input[name=' + fieldName + ']').val(), 10);
+
+			  if (!isNaN(currentVal)) {
+				parent.find('input[name=' + fieldName + ']').val(currentVal + 1);
+			  } else {
+				parent.find('input[name=' + fieldName + ']').val(0);
+			  }
+		}
+
+		function decrementValue(e) {
+		  e.preventDefault();
+		  var fieldName = $(e.target).data('field');
+		  var parent = $(e.target).closest('div');
+		  var currentVal = parseInt(parent.find('input[name=' + fieldName + ']').val(), 10);
+
+		  if (!isNaN(currentVal) && currentVal > 0) {
+			parent.find('input[name=' + fieldName + ']').val(currentVal - 1);
+		  } else {
+			parent.find('input[name=' + fieldName + ']').val(0);
+		  }
+		}
+
+		$('.input-group').on('click', '.button-plus', function(e) {
+		  incrementValue(e);
+		});
+
+		$('.input-group').on('click', '.button-minus', function(e) {
+		  decrementValue(e);
+		});
+	$(document).click(".button-minus.button-plus", function() {
+		var sum = 0;
+		$("input[name*='quantity']").each(function(){
+			sum += +$(this).val();
+		});
+		$(".totalquantity").text('บันทึกตะกร้าสินค้า จำนวน '+ sum +' ชิ้น');
+	});
+
+	});
+	
+	///
+	
+
+	
+	</script>
+</head>
+
+<body>
+    <div class="es-wrapper-color">
+        <!--[if gte mso 9]>
+			<v:background xmlns:v="urn:schemas-microsoft-com:vml" fill="t">
+				<v:fill type="tile" color="#f6f6f6"></v:fill>
+			</v:background>
+		<![endif]-->
+        <table class="es-wrapper" cellspacing="0" cellpadding="0" width="100%">
+            <tbody>
+                <tr class="gmail-fix" height="0">
+                    <td>
+                        <table cellpadding="0" cellspacing="0" border="0" align="center" width="600">
+                            <tbody>
+                                <tr>
+                                    <td cellpadding="0" cellspacing="0" border="0" height="0" style="line-height: 1px; min-width: 600px;"><img src="https://esputnik.com/repository/applications/images/blank.gif" width="600" height="1" style="display: block; max-height: 0px; min-height: 0px; min-width: 600px; width: 600px;" alt></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="esd-email-paddings" valign="top">
+                        <table class="es-content esd-header-popover" cellspacing="0" cellpadding="0" align="center">
+                            <tbody>
+                                <tr>
+                                    <td class="esd-stripe" align="center">
+                                        <table class="es-content-body" cellspacing="0" cellpadding="0" width="600" bgcolor="#ffffff" align="center">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="esd-structure es-p20t es-p20r es-p20l" align="left">
+                                                        <table cellpadding="0" cellspacing="0" width="100%">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="560" class="esd-container-frame" align="center" valign="top">
+                                                                        <table cellpadding="0" cellspacing="0" width="100%">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td class="esd-block-text es-m-p0r es-m-p0t es-p5t es-p15r es-p15l" align="center">
+                                                                                        <p style="color: #0084ff; font-size: 18px;">ProClean ชุดถังปั่นสแตนเลส+ไม้ถูพื้น</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                
+                                                
+                                                {% if items %}
+                                                <ul>
+                                                {% for item in items %}
+                                         
+                                      
+
+
+                                                <tr>
+                                                    <td class="esd-structure es-p20 esdev-adapt-off" align="left">
+                                                        <table width="560" cellpadding="0" cellspacing="0" class="esdev-mso-table">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="esdev-mso-td" valign="top">
+                                                                        <table class="es-left" cellspacing="0" cellpadding="0" align="left">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td class="es-m-p0r esd-container-frame" width="180" valign="top" align="center">
+                                                                                        <table cellspacing="0" cellpadding="0" width="100%">
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <td class="esd-block-image" align="center"><a target="_blank"><img class="adapt-img" src="{{ item.ImageUrl }}" alt style="display: block;" width="180"></a></td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                    <td width="20"></td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td class="esdev-mso-td" valign="top">
+                                                                        <table cellspacing="0" cellpadding="0" align="right">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td class="esd-container-frame" width="360" align="left">
+                                                                                        <table cellspacing="0" cellpadding="0" width="100%">
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <td class="esd-block-text es-p15t" align="left">
+                                                                                                        <h3 style="font-size: 14px;">{{ item.Name }}</h3>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td class="esd-block-text es-p15t" align="left">
+																						
+																										<div class="input-group"  id="rightdiv" >
+																										  <input type="button" value="-" class="button-minus" data-field="quantity">
+																										  <input type="number" step="1" max="" value="0" name="quantity" class="quantity-field">
+																										  <input type="button" value="+" class="button-plus" data-field="quantity">
+																										</div>
+																										
+																									
+																										<div id="leftdiv" style="font-size: 14px;">{{ item.SellPrice }} <strike>{{ item.Price }}</strike></div>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+
+
+
+
+                                                {% endfor %}
+                                            </ul>
+                                        {% else %}
+                                            <p>No polls are available.</p>
+                                        {% endif %}
+
+
+
+
+
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="es-content" cellspacing="0" cellpadding="0" align="center">
+                            <tbody>
+                                <tr>
+                                    <td class="esd-stripe" align="center">
+                                        <table class="es-content-body" style="background-color: transparent;" cellspacing="0" cellpadding="0" width="600" bgcolor="transparent" align="center">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="esd-structure es-p20t es-p20b es-p20r es-p20l" align="left" bgcolor="#ffffff" style="background-color: rgb(255, 255, 255);">
+                                                        <table cellpadding="0" cellspacing="0" width="100%">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="560" class="esd-container-frame" align="center" valign="top">
+                                                                        <table cellpadding="0" cellspacing="0" width="100%">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left" class="esd-block-text">
+                                                                                        
+    <div class="uk-container uk-padding">
+
+        <!-- DEMO 1 -->
+
+
+        <div id="loader">
+            <div uk-spinner></div> รอสักครู่ กำลังโหลดฐานข้อมูล...
+        </div>
+
+
+        <!-- END DEMO 1 -->
+		<div class="form-group">
+		 <form id="demo1" name="registration" class="demo" style="display:none;" autocomplete="off" uk-grid >
+								<label for="fname">ชื่อ นามสกุล</label>
+									<input class="uk-input uk-width-1-1" name="namelastname" class="form-control" placeholder="">
+								<label for="tel">เบอร์โทรศัพท์</label>
+									<input class="uk-input uk-width-1-1" name="tel" class="form-control" placeholder="">
+									
+								<label for="address">บ้านเลขที่/หมู่/ซอย/อาคาร</label>
+									<input class="uk-input uk-width-1-1" name="address" class="form-control" placeholder="">
+								<label for="district">ตำบล / แขวง</label>
+									<input class="uk-input uk-width-1-1" name="district" class="form-control" placeholder="">
+								<label for="amphoe">อำเภอ / เขต</label>
+									<input class="uk-input uk-width-1-1" name="amphoe" class="form-control" placeholder="">
+								<label for="province">จังหวัด</label>
+									<input class="uk-input uk-width-1-1" name="province" class="form-control" placeholder="">
+								<label for="zipcode">รหัสไปรษณีย์</label>
+									<input class="uk-input uk-width-1-1" name="zipcode" class="form-control" placeholder="">
+		</form>
+								</div>   
+    </div>
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.20/js/uikit.min.js"></script>
+    
+    <!-- dependencies for zip mode -->
+    <script type="text/javascript" src="./jquery.Thailand.js/dependencies/zip.js/zip.js"></script>
+    <!-- / dependencies for zip mode -->
+
+    <script type="text/javascript" src="./jquery.Thailand.js/dependencies/JQL.min.js"></script>
+    <script type="text/javascript" src="./jquery.Thailand.js/dependencies/typeahead.bundle.js"></script>
+    
+    <script type="text/javascript" src="./jquery.Thailand.js/dist/jquery.Thailand.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+    <script type="text/javascript">
+        /******************\
+         *     DEMO 1     *
+        \******************/ 
+        // demo 1: load database from json. if your server is support gzip. we recommended to use this rather than zip.
+        // for more info check README.md
+
+        $.Thailand({
+            database: './jquery.Thailand.js/database/db.json', 
+
+            $district: $('#demo1 [name="district"]'),
+            $amphoe: $('#demo1 [name="amphoe"]'),
+            $province: $('#demo1 [name="province"]'),
+            $zipcode: $('#demo1 [name="zipcode"]'),
+
+            onDataFill: function(data){
+                console.info('Data Filled', data);
+            },
+
+            onLoad: function(){
+                console.info('Autocomplete is ready!');
+                $('#loader, .demo').toggle();
+            }
+        });
+
+        // watch on change
+
+        $('#demo1 [name="district"]').change(function(){
+            console.log('ตำบล', this.value);
+        });
+        $('#demo1 [name="amphoe"]').change(function(){
+            console.log('อำเภอ', this.value);
+        });
+        $('#demo1 [name="province"]').change(function(){
+            console.log('จังหวัด', this.value);
+        });
+        $('#demo1 [name="zipcode"]').change(function(){
+            console.log('รหัสไปรษณีย์', this.value);
+        });
+
+			<!-- Form validation -->
+			    
+				$(function() {
+					  // Initialize form validation on the registration form.
+					  // It has the name attribute "registration"
+					  $("form[name='registration']").validate({
+						// Specify validation rules
+						rules: {
+						  // The key name on the left side is the name attribute
+						  // of an input field. Validation rules are defined
+						  // on the right side
+						  namelastname: "required",
+						  lastname: "required",
+						  email: {
+							required: true,
+							// Specify that email should be validated
+							// by the built-in "email" rule
+							email: true
+						  },
+						  password: {
+							required: true,
+							minlength: 5
+						  }
+						},
+						// Specify validation error messages
+						messages: {
+						  firstname: "Please enter your firstname",
+						  lastname: "Please enter your lastname",
+						  password: {
+							required: "Please provide a password",
+							minlength: "Your password must be at least 5 characters long"
+						  },
+						  email: "Please enter a valid email address"
+						},
+						// Make sure the form is submitted to the destination defined
+						// in the "action" attribute of the form when valid
+						submitHandler: function(form) {
+						  form.submit();
+						}
+					  });
+				});
+    </script>
+    
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table cellpadding="0" cellspacing="0" class="es-content esd-footer-popover" align="center">
+                            <tbody>
+                                <tr>
+                                    <td class="esd-stripe" align="center">
+                                        <table bgcolor="#ffffff" class="es-content-body" align="center" cellpadding="0" cellspacing="0" width="600">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="esd-structure" align="left">
+                                                        <table cellpadding="0" cellspacing="0" width="100%">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="600" class="esd-container-frame" align="center" valign="top">
+                                                                        <table cellpadding="0" cellspacing="0" width="100%">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="center" class="esd-block-button es-p5t es-p40b"><span class="es-button-border" style="border-color: rgb(44, 181, 67); background: rgb(0, 132, 255); border-width: 0px; border-radius: 5px;"><a href class="es-button" target="_blank" style="background: rgb(0, 132, 255); border-color: rgb(0, 132, 255); border-width: 10px 99px; font-size: 14px; border-radius: 5px;"><span class="totalquantity">โปรดกดปุ่มเพิ่มจำนวนสินค้า</span></a></span></td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
