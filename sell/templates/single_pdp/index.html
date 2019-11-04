@@ -1,12 +1,4 @@
-<!-- {% if items %}
-    <ul>
-    {% for item in items %}
-        <li>{{ item.Name }}</li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No polls are available.</p>
-{% endif %} -->
+{% load static %}
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
@@ -21,9 +13,8 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.20/css/uikit.css"> -->
-    <link rel="stylesheet" href="./jquery.Thailand.js/dist/jquery.Thailand.min.css">
-    
-	<link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="{% static "jquery.Thailand.js/dist/jquery.Thailand.min.css" %}">
+    <link rel="stylesheet" href="{% static "css.css" %}">
 
 	
 	<script>
@@ -271,13 +262,18 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.20/js/uikit.min.js"></script>
     
     <!-- dependencies for zip mode -->
-    <script type="text/javascript" src="./jquery.Thailand.js/dependencies/zip.js/zip.js"></script>
+    <!-- <script type="text/javascript" src="./jquery.Thailand.js/dependencies/zip.js/zip.js"></script> -->
+    <script type="text/javascript" src="{% static "jquery.Thailand.js/dependencies/zip.js/zip.js" %}"></script>
+
     <!-- / dependencies for zip mode -->
 
-    <script type="text/javascript" src="./jquery.Thailand.js/dependencies/JQL.min.js"></script>
-    <script type="text/javascript" src="./jquery.Thailand.js/dependencies/typeahead.bundle.js"></script>
+    <!-- <script type="text/javascript" src="./jquery.Thailand.js/dependencies/JQL.min.js"></script> -->
+    <script type="text/javascript" src="{% static "jquery.Thailand.js/dependencies/JQL.min.js" %}"></script>
+    <!-- <script type="text/javascript" src="./jquery.Thailand.js/dependencies/typeahead.bundle.js"></script> -->
+    <script type="text/javascript" src="{% static "jquery.Thailand.js/dependencies/typeahead.bundle.js" %}"></script>
     
-    <script type="text/javascript" src="./jquery.Thailand.js/dist/jquery.Thailand.min.js"></script>
+    <!-- <script type="text/javascript" src="./jquery.Thailand.js/dist/jquery.Thailand.min.js"></script> -->
+    <script type="text/javascript" src="{% static "jquery.Thailand.js/dist/jquery.Thailand.min.js" %}"></script>
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
     <script type="text/javascript">
@@ -286,10 +282,10 @@
         \******************/ 
         // demo 1: load database from json. if your server is support gzip. we recommended to use this rather than zip.
         // for more info check README.md
-
+        // database: './jquery.Thailand.js/database/db.json', 
         $.Thailand({
-            database: './jquery.Thailand.js/database/db.json', 
 
+            database: "{% static "jquery.Thailand.js/database/db.json" %}",
             $district: $('#demo1 [name="district"]'),
             $amphoe: $('#demo1 [name="amphoe"]'),
             $province: $('#demo1 [name="province"]'),
