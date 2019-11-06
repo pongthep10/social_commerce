@@ -2,8 +2,13 @@
 <form method="POST" class="post-form">
         {% csrf_token %}
         {{ form.name }}
+        {{ form.tel }}
+        {{ form.address }}
+        {{ form.district }}
+        {{ form.amphoe }}
         <button type="submit" class="save btn btn-default">Save</button>
 </form>
+
 
 
     
